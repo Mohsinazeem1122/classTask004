@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .container {
+      width: full;
+      height: full;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid black; */
+    }
+    #toggleBtn {
+      padding: 8px 20px;
+    }
+    .night {
+      background-color: black;
+      color: white;
+    }
+    .day {
+      background-color: white;
+      color: black;
+    }
+  </style>
+
+  <body id="bd">
+    <div class="container">
+      <button id="button" class="night day" onclick="toggleBtn()">Night</button>
+    </div>
+
+    <script>
+      const button = document.getElementById("button");
+      const bd = document.getElementById("bd");
+
+      function toggleBtn() {
+        if (button.innerText === "Night") {
+          bd.style.backgroundColor = "black";
+          button.innerText = "Day";
+        } else {
+          bd.style.backgroundColor = "white";
+          button.innerText = "Night";
+        }
+      }
+    </script>
+  </body>
+</html>
